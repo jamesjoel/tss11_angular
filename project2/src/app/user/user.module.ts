@@ -10,6 +10,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { InfoComponent } from './shared/info/info.component';
 import { SliderComponent } from './shared/slider/slider.component';
+import { PopulerComponent } from './shared/populer/populer.component';
 
 
 
@@ -23,7 +24,8 @@ import { SliderComponent } from './shared/slider/slider.component';
     HeaderComponent,
     FooterComponent,
     InfoComponent,
-    SliderComponent
+    SliderComponent,
+    PopulerComponent
   ],
   imports: [
     CommonModule,
