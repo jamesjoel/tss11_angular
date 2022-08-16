@@ -8,6 +8,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { CategoryComponent } from './pages/category/category.component';
+import { CityComponent } from './pages/city/city.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CategoryComponent } from './pages/category/category.component';
     FooterComponent,
     DashboardComponent,
     ProductsComponent,
-    CategoryComponent
+    CategoryComponent,
+    CityComponent
   ],
   imports: [
     CommonModule,
