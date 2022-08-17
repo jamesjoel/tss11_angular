@@ -13,17 +13,23 @@ export class CityComponent implements OnInit {
 
   allCity : any[]=[];
   constructor(
-    private _http : HttpClient
+    public _http : HttpClient
   ) {
 
-    this._http.get<any>(environment.apiUrl+"city").subscribe(result=>{
+    this._http.get<any>(environment.apiUrl+"city").subscribe(data=>{
       // console.log(result);
-      this.allCity = result;
+      this.allCity = data;
     });
 
    }
 
   ngOnInit(): void {
+  }
+
+  demo(){
+    this._http.get<any>("https://jsonplaceholder.typicode.com/todos").subscribe(result=>{
+      console.log(result)
+    })
   }
 
 }

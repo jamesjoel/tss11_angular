@@ -1,0 +1,71 @@
+<div class="container" style="min-height: 700px;">
+    <form [formGroup]="signupForm">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2>User Signup</h2>
+            <div class="form-group">
+                <label for="">Full Name</label>
+                <input type="text" formControlName="full_name" class="form-control" />
+                <div *ngIf="signupForm.controls['full_name'].errors && check" class="text-danger">
+                    <small>Insert Your Full Name</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="text" formControlName="email" class="form-control" />
+                <div *ngIf="signupForm.controls['email'].errors && check" class="text-danger">
+                    <small>Insert Email Id</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" formControlName="password" class="form-control" />
+                <div *ngIf="signupForm.controls['password'].errors && check" class="text-danger">
+                    <small>Insert Your Password</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Re-Password</label>
+                <input type="password" formControlName="re_password" class="form-control" />
+                <div *ngIf="signupForm.controls['re_password'].errors && check" class="text-danger">
+                    <small>Insert Your Re-Password</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Address</label>
+                <textarea formControlName="address" class="form-control" ></textarea>
+                <div *ngIf="signupForm.controls['address'].errors && check" class="text-danger">
+                    <small>Insert Your Address</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Gender</label>
+                Male <input type="radio" formControlName="gender" value="male" />
+                Female <input type="radio" formControlName="gender" value="female" />
+                <div *ngIf="signupForm.controls['gender'].errors && check" class="text-danger">
+                    <small>Select Your Gender</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">City</label>
+                <select formControlName="city" class="form-control" >
+                    <option>Select</option>
+                    <option *ngFor="let c of allCity">{{ c.name }}</option>
+                </select>
+                <div *ngIf="signupForm.controls['city'].errors && check" class="text-danger">
+                    <small>Select Your City</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Contact</label>
+                <input type="text" formControlName="contact" class="form-control" />
+                <div *ngIf="signupForm.controls['contact'].errors && check" class="text-danger">
+                    <small>Insert Your Contact Number</small>
+                </div>
+            </div>
+            <br />
+            <input type="submit" (click)="submit()" value="Signup" class="btn btn-success" />
+        </div>
+    </div>
+    </form>
+</div>
