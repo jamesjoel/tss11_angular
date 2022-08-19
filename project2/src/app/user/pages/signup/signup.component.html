@@ -14,7 +14,8 @@
                 <label for="">Email</label>
                 <input type="text" formControlName="email" class="form-control" />
                 <div *ngIf="signupForm.controls['email'].errors && check" class="text-danger">
-                    <small>Insert Email Id</small>
+                    <small *ngIf="signupForm.controls['email'].errors['required']">Insert Email Id</small>
+                    <small *ngIf="signupForm.controls['email'].errors['email']">Incorrect Email Id</small>
                 </div>
             </div>
             <div class="form-group">
@@ -28,7 +29,8 @@
                 <label for="">Re-Password</label>
                 <input type="password" formControlName="re_password" class="form-control" />
                 <div *ngIf="signupForm.controls['re_password'].errors && check" class="text-danger">
-                    <small>Insert Your Re-Password</small>
+                    <small *ngIf="signupForm.controls['re_password'].errors['required']">Insert Your Re-Password</small>
+                    <small *ngIf="signupForm.controls['re_password'].errors['rePassErr']">Password and Re-Password not Correct </small>
                 </div>
             </div>
             <div class="form-group">
@@ -60,7 +62,8 @@
                 <label for="">Contact</label>
                 <input type="text" formControlName="contact" class="form-control" />
                 <div *ngIf="signupForm.controls['contact'].errors && check" class="text-danger">
-                    <small>Insert Your Contact Number</small>
+                    <small *ngIf="signupForm.controls['contact'].errors['required']">Insert Your Contact Number</small>
+                    <small *ngIf="signupForm.controls['contact'].errors['numErr']">Insert Numbers Only</small>
                 </div>
             </div>
             <br />

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'; 
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import  { Router } from '@angular/router';
+import { checkPass, checkNum } from '../../helpers/custome.validation';
 
 @Component({
   selector: 'app-signup',
@@ -17,18 +19,21 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private _fb : FormBuilder,
-    private _http : HttpClient
+    private _http : HttpClient,
+    private _router : Router
   ) {
 
     this.signupForm = this._fb.group({
       full_name : ["", Validators.required],
-      email : ["", Validators.required],
+      email : ["", [Validators.required, Validators.email]],
       password : ["", Validators.required],
       re_password : ["", Validators.required],
       address : ["", Validators.required],
       gender : ["", Validators.required],
       city : ["", Validators.required],
       contact : ["", Validators.required]
+    },{
+      validator : [checkPass(), checkNum()]
     });
 
     this._http.get<any>(environment.apiUrl+"city").subscribe(result=>{
@@ -47,7 +52,8 @@ export class SignupComponent implements OnInit {
     }else{
 
       this._http.post<any>(environment.apiUrl+"user", this.signupForm.value).subscribe(result=>{
-        console.log(result);
+        // console.log(result);
+        this._router.navigate(["/login"]);
       })
     }
   }

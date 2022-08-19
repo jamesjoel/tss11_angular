@@ -14,6 +14,7 @@ import { InfoComponent } from './shared/info/info.component';
 import { SliderComponent } from './shared/slider/slider.component';
 import { PopulerComponent } from './shared/populer/populer.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 
@@ -29,7 +30,8 @@ import { SignupComponent } from './pages/signup/signup.component';
     InfoComponent,
     SliderComponent,
     PopulerComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
