@@ -37,6 +37,9 @@ export class LoginComponent implements OnInit {
       this._http.post<any>(environment.apiUrl+"login", this.loginFrm.value).subscribe(result=>{
           
           if(result.success){
+            // console.log(result);
+            let token = result.token;
+            localStorage.setItem("token", token);
             this._router.navigate(["/"]);
           }else{
 
