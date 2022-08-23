@@ -16,6 +16,7 @@ import { PopulerComponent } from './shared/populer/populer.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MyAccountComponent } from './pages/my-account/my-account.component';
+import { UpdateProfileComponent } from './pages/update-profile/update-profile.component';
 
 
 
@@ -33,7 +34,8 @@ import { MyAccountComponent } from './pages/my-account/my-account.component';
     PopulerComponent,
     SignupComponent,
     LoginComponent,
-    MyAccountComponent
+    MyAccountComponent,
+    UpdateProfileComponent
   ],
   imports: [
     CommonModule,

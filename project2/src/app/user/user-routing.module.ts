@@ -8,6 +8,7 @@ import { MyAccountComponent } from './pages/my-account/my-account.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { UserComponent } from './user.component';
 import { AuthGuard } from './guards/auth.guard';
+import { UpdateProfileComponent } from './pages/update-profile/update-profile.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,11 @@ const routes: Routes = [
       {
         path : "my-account",
         component : MyAccountComponent,
+        canActivate : [AuthGuard]
+      },
+      {
+        path : "update-profile",
+        component : UpdateProfileComponent,
         canActivate : [AuthGuard]
       }
     ]
