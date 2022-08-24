@@ -1,1 +1,9 @@
-<p>products works!</p>
+<div class="container mt-4">
+    <div class="row">
+        <div *ngFor="let x of allPro" class="col-md-3 my-3">
+            <app-product-box [x]="x"></app-product-box>
+            <!-- [child]="parent" -->
+        </div>
+        
+    </div>
+</div>

@@ -1,2 +1,23 @@
+<!-- Data Sharing B/W Component -->
+<div class="container mt-4">
+    <div class="row">
+        <br />
+        <div class="col-md-12">
+            <h1>Parent Component</h1>
+            <br />
+            <br />
+            
+                
+                Insert Any Number : <input [(ngModel)]="x"  type="text" /><button (click)="submit()">OK</button>
+                <br />
+                <br />
+            
+                <h2>Name : {{ name }}</h2>
 
-<p>dashboard works!</p>
+
+            <app-box [cName]="name" [x]="y"></app-box>
+
+
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-products',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  allPro : any;
+  constructor(
+    private _http : HttpClient
+  ) {
+
+    this._http.get<any>("https://fakestoreapi.com/products").subscribe(result=>{
+      // console.log(result);
+      this.allPro = result;
+    })
+
+   }
 
   ngOnInit(): void {
   }

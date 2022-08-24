@@ -9,6 +9,9 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { CityComponent } from './pages/city/city.component';
+import { BoxComponent } from './shared/box/box.component';
+import { ProductBoxComponent } from './shared/product-box/product-box.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,11 +22,15 @@ import { CityComponent } from './pages/city/city.component';
     DashboardComponent,
     ProductsComponent,
     CategoryComponent,
-    CityComponent
+    CityComponent,
+    BoxComponent,
+    ProductBoxComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class AdminModule { }
