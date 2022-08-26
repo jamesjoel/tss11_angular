@@ -12,6 +12,7 @@ import { CityComponent } from './pages/city/city.component';
 import { BoxComponent } from './shared/box/box.component';
 import { ProductBoxComponent } from './shared/product-box/product-box.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Box2Component } from './shared/box2/box2.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CategoryComponent,
     CityComponent,
     BoxComponent,
-    ProductBoxComponent
+    ProductBoxComponent,
+    Box2Component
   ],
   imports: [
     CommonModule,

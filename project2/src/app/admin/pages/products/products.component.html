@@ -1,7 +1,9 @@
 <div class="container mt-4">
+    <!-- <pre>{{ cartArr | json }}</pre> -->
+    <b>My Cart ({{ cartArr.length }})</b>
     <div class="row">
         <div *ngFor="let x of allPro" class="col-md-3 my-3">
-            <app-product-box [x]="x"></app-product-box>
+            <app-product-box [x]="x" (cartEvent)="cartEvent($event)"></app-product-box>
             <!-- [child]="parent" -->
         </div>
         

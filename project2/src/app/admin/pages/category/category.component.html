@@ -1,1 +1,10 @@
-<p>category works!</p>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>{{ name }}</h3>
+            <h2>Parent Compoent</h2>
+
+            <app-box2 (myEvent)="come($event)"></app-box2>
+        </div>
+    </div>
+</div>
